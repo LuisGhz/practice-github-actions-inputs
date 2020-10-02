@@ -6,6 +6,9 @@ inputs:
     description: 'input description here'
     default: 'World'
     required: true
+  my_object:
+    description: 'Object as input'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
