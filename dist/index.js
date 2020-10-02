@@ -6526,6 +6526,10 @@ const YAML = __webpack_require__(521);
 function run() {
     const name = core.getInput('my_input');
     const objectStr = core.getInput('my_object');
+    if (objectStr) {
+        const object = YAML.parse(objectStr);
+        console.log(object);
+    }
     if (name) {
         console.log(name);
         core.info(`Hello ${name}!`);
@@ -6533,10 +6537,6 @@ function run() {
     }
     else {
         core.setFailed('my_input not specified!');
-    }
-    if (objectStr) {
-        const object = YAML.parse(objectStr);
-        console.log(object);
     }
 }
 run();
