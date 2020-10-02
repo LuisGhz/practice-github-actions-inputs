@@ -20,6 +20,9 @@ jobs:
           - images:
               - src: Source
                 title: My image
+              - src: Source 2
+                title: My image 2
+
           - activityImage: image.jpg
             activityTitle: Title
             activityText: Text
