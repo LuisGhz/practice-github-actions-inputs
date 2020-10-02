@@ -9,6 +9,9 @@ inputs:
   my_object:
     description: 'Object as input'
     required: false
+  my_boolean:
+    description: 'Boolean as input'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'

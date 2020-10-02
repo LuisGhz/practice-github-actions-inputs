@@ -6526,10 +6526,12 @@ const YAML = __webpack_require__(521);
 function run() {
     const name = core.getInput('my_input');
     const objectStr = core.getInput('my_object');
+    const boolean = core.getInput('my_boolean') == "true";
     if (objectStr) {
         const object = YAML.parse(objectStr);
         console.log(JSON.stringify(object, null, 4));
     }
+    console.log(typeof boolean);
     if (name) {
         console.log(name);
         core.info(`Hello ${name}!`);
