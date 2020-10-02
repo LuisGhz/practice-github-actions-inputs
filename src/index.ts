@@ -5,9 +5,9 @@ function run() {
   const name: string = core.getInput('my_input');
   const objectStr: any = core.getInput('my_object');
 
-  if(objectStr) {
+if(objectStr) {
     const object = YAML.parse(objectStr)
-    console.log(object)
+    console.log(JSON.stringify(object, null, 4))
   }
 
   if (name) {

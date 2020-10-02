@@ -6528,7 +6528,7 @@ function run() {
     const objectStr = core.getInput('my_object');
     if (objectStr) {
         const object = YAML.parse(objectStr);
-        console.log(object);
+        console.log(JSON.stringify(object, null, 4));
     }
     if (name) {
         console.log(name);
