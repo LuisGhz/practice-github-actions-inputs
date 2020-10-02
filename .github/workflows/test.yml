@@ -16,6 +16,13 @@ jobs:
       uses: ./
       with: 
         my_input: 'World'
+        my_object: |
+          - images:
+              - src: Source
+                title: My image
+          - activityImage: image.jpg
+            activityTitle: Title
+            activityText: Text
 
     - name: log action output
       run: echo ${{steps.run_action.outputs.my_output}}     
